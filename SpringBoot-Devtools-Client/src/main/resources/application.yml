@@ -1,0 +1,16 @@
+server:
+  port: 81
+ 
+  
+#spring:  #在某些资源更改的时候不一定需要促发重启，例如可以就地编辑Thymeleaf模板，在改变配置的资源/templates 中的文件不会促发重启但引发现成重装，通过如下配置派出不促发重启部分
+#  devtools:
+#    restart:
+#      exclude: /templates
+#      enabled: false  #禁用重启功能
+#      #additional-exclude: /xxxx #与上面的exclude相反 ，配置不重启的部分，其它的重启
+
+
+spring: #添加安全配置  ，mysecret 相当于密码
+  devtools:
+    remote:
+      secret: mysecret  
