@@ -72,6 +72,8 @@
 		<module>SpringBoot-Devtools-Server</module>
 		<module>SpringBoot-Devtools-Client</module>
 		<module>SpringBoot-02Servlet</module>
+		<module>SpringBoot-03Filter</module>
+		<module>SpringBoot-04Listener</module>
 	</modules>
 
 
