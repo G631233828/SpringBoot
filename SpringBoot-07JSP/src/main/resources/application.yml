@@ -1,0 +1,8 @@
+server:
+  port: 80
+  
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp  #配置解析目录
+      suffix: .jsp          #配置解析的文件

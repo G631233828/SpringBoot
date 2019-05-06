@@ -68,12 +68,15 @@
 
 
 	<modules>
-		<module>SpringBoot-HelloWorld</module>
+		<module>SpringBoot-01HelloWorld</module>
 		<module>SpringBoot-Devtools-Server</module>
 		<module>SpringBoot-Devtools-Client</module>
 		<module>SpringBoot-02Servlet</module>
 		<module>SpringBoot-03Filter</module>
 		<module>SpringBoot-04Listener</module>
+		<module>SpringBoot-05Static-Resources</module>
+		<module>Springboot-06FileUpload</module>
+		<module>SpringBoot-07JSP</module>
 	</modules>
 
 
