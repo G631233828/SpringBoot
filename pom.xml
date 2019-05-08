@@ -77,6 +77,8 @@
 		<module>SpringBoot-05Static-Resources</module>
 		<module>Springboot-06FileUpload</module>
 		<module>SpringBoot-07JSP</module>
+		<module>SpringBoot-08Freemarker</module>
+		<module>SpringBoot-09Thymeleaf</module>
 	</modules>
 
 

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1" align="center" width="50%">
+		<tbody>
+			<tr>
+				<th>排序</th>
+				<th>标签</th>
+				<th>属性</th>
+				<th>显示</th>
+			</tr>
+			
+			<tr>
+				<td >1</td>
+				<td >th:text</td>
+				<td >th:text="${msg}"</td>
+				<td th:text="${msg}"></td>
+			</tr>
+			<tr>
+				<td >2</td>
+				<td >th:value</td>
+				<td >th:value="${msg}"</td>
+				<td><input th:value="${msg}"></td>
+			</tr>
+			<tr>
+				<td >3</td>
+				<td >判断是否空,为空返回true否则返回false</td>
+				<td >${#strings.isEmpty(msg)}</td>
+				<td><input th:value="${#strings.isEmpty(msg)}"></td>
+			</tr>
+			<tr>
+				<td >4</td>
+				<td >判断msg中是否包含了hello</td>
+				<td >${#strings.contains(msg,'hello')}</td>
+				<td><input th:value="${#strings.contains(msg,'hello')}"></td>
+			</tr>
+			<tr>
+				<td >5</td>
+				<td >判断msg是否以hello开头</td>
+				<td >${#strings.startsWith(msg,'hello')}</td>
+				<td><input th:value="${#strings.startsWith(msg,'hello')}"></td>
+			</tr>
+			<tr>
+				<td >6</td>
+				<td >判断msg是否以hello结尾</td>
+				<td >${#strings.endsWith(msg,'thymeleaf')}</td>
+				<td><input th:value="${#strings.endsWith(msg,'thymeleaf')}"></td>
+			</tr>
+			<tr>
+				<td >7</td>
+				<td >获取字符串的长度</td>
+				<td >${#strings.length(msg)}</td>
+				<td><input th:value="${#strings.length(msg)}"></td>
+			</tr>
+			<tr>
+				<td >8</td>
+				<td >获取索引位置，从0开始,没找到返回-1</td>
+				<td >${#strings.indexOf(msg,'o')}</td>
+				<td><input th:value="${#strings.indexOf(msg,'t')}"></td>
+			</tr>
+			<tr>
+				<td >9</td>
+				<td >字符串截取,从第一个截取到13个字符串，可以只传一个参数</td>
+				<td >${#strings.substring(msg,0,13)}</td>
+				<td><input th:value="${#strings.substring(msg,0,13)}"></td>
+			</tr>
+			<tr>
+				<td >10</td>
+				<td >转换大写</td>
+				<td >${#strings.toUpperCase(msg)}</td>
+				<td><input th:value="${#strings.toUpperCase(msg)}"></td>
+			</tr>
+			<tr>
+				<td >11</td>
+				<td >转换小写</td>
+				<td >${#strings.toLowerCase('HELLO')}</td>
+				<td><input th:value="${#strings.toLowerCase('HELLO')}"></td>
+			</tr>
+			<tr>
+				<td >12</td>
+				<td >日期格式转换</td>
+				<td >${#dates.format(date)}</td>
+				<td><input th:value="${#dates.format(date)}"></td>
+			</tr>
+			<tr>
+				<td >13</td>
+				<td >获取日</td>
+				<td >${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}</td>
+				<td><input th:value="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}"></td>
+			</tr>
+			<tr>
+				<td >14</td>
+				<td >日期格式转换</td>
+				<td >${#dates.year(date)}</td>
+				<td><input th:value="${#dates.year(date)}"></td>
+			</tr>
+			<tr>
+				<td >15</td>
+				<td >获取年</td>
+				<td >${#dates.month(date)}</td>
+				<td><input th:value="${#dates.month(date)}"></td>
+			</tr>
+			<tr>
+				<td >16</td>
+				<td >获取月</td>
+				<td >${#dates.day(date)}</td>
+				<td><input th:value="${#dates.day(date)}"></td>
+			</tr>
+			
+		</tbody>
+	
+	</table>
+</body>
+</html>
