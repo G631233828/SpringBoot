@@ -6,10 +6,7 @@
 		<artifactId>SpringBoot</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>SpringBoot-09Thymeleaf</artifactId>
-	<properties>
-		<thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
-	</properties>
+	<artifactId>SpringBoot-14Loader</artifactId>
 
 
 	<dependencies>
@@ -29,7 +26,7 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.projectlombok</groupId> 
+			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
@@ -39,8 +36,34 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- spring boot devtools 依赖包. -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+			<scope>true</scope>
+		</dependency>
 
 	</dependencies>
 
+	<!-- 构建节点 -->
+	<build>
+		<plugins>
+			<!-- 这是spring boot devtool plugin -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<!--fork : 如果没有该项配置，肯呢个devtools不会起作用，即应用不会restart -->
+					<fork>true</fork>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

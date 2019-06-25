@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1" align="center" width="50%">
+		<tbody>
+			<tr>
+				<th>序号</th>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>地址</th>
+			</tr>
+			<th:block  th:each="maps:${map}">
+			<tr th:each="user:${maps}" >
+				<td th:text="${user.key}"></td>
+				<td th:text="${user.value.username}"></td>
+				<td th:text="${user.value.age}"></td>
+				<td th:text="${user.value.address}"></td>
+			</tr>
+			
+			</th:block>
+			
+			
+			
+		</tbody>
+	
+	</table>
+</body>
+</html>

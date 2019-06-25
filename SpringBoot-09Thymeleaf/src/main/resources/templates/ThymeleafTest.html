@@ -110,6 +110,54 @@
 				<td >${#dates.day(date)}</td>
 				<td><input th:value="${#dates.day(date)}"></td>
 			</tr>
+			<tr>
+				<td >17</td>
+				<td >条件判断</td>
+				<td >th:if="${flag == true}"</td>
+				<td th:if="${flag == true}" > true</td>
+				<td th:if="${flag == false}" > false</td>
+			</tr>
+			<tr>
+				<td >18</td>
+				<td >条件判断</td>
+				<td >th:switch="${number}&th:case="3"</td>
+				<td th:switch="${number}" > 
+				<input th:case="1" value="case1">
+				<input th:case="2" value="case2">
+				<input th:case="3" value="case3">
+				</td>
+			</tr>
+
+			<tr th:each="user:${userlist}">
+			<td>user:${userlist}</td>
+			<td>[[${user.username}]]</td>
+			<td>[[${user.age}]]</td>
+			<td>[[${user.address}]]</td>
+			</tr>
+			<tr th:each="user,var:${userlist}">
+			<td>user,var:${userlist}</td>
+			<td >th:text="${var.index}"</td>
+			<td th:text="${var.index}"></td>
+			<td >th:text="${var.count}"</td>
+			<td th:text="${var.count}"></td>
+			</tr>
+			<tr th:each="user,var:${userlist}">
+			<td>user,var:${userlist}</td>
+			<td >th:text="${var.size}"</td>
+			<td th:text="${var.size}"></td>
+			<td >th:text="${var.even}"</td>
+			<td th:text="${var.even}"></td>
+			</tr>
+			<tr th:each="user,var:${userlist}">
+			<td>user,var:${userlist}</td>
+			<td >th:text="${var.odd}"</td>
+			<td th:text="${var.odd}"></td>
+			<td >th:text="${var.first}"|th:text="${var.last}"</td>
+			<td th:text="|${var.first},${var.last}|"></td>	
+			</tr>
+			
+			
+			
 			
 		</tbody>
 	

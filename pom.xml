@@ -79,6 +79,12 @@
 		<module>SpringBoot-07JSP</module>
 		<module>SpringBoot-08Freemarker</module>
 		<module>SpringBoot-09Thymeleaf</module>
+		<module>SpringBoot-10Mybatis</module>
+		<module>SpringBoot-11validate</module>
+		<module>SpringBoot-12exceptions</module>
+		<module>SpringBoot-13JunitTest</module>
+		<module>SpringBoot-14Loader</module>
+		<module>SpringBoot-15Ehcache</module>
 	</modules>
 
 

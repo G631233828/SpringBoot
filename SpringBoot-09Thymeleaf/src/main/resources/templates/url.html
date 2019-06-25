@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a th:href="@{http://www.baidu.com}">使用绝对路径</a>
+	<hr/>
+	<a th:href="@{/show}">相对路径</a>
+	<hr/>
+	<a th:href="@{~/}">服务器根</a>
+	<hr/>
+	<a th:href="@{/testparam(id=1,name=fliay)}">相对路径带参数</a>
+	<hr/>
+	<a th:href="@{/testparam/123(name=fliay)}">相对路径带参数</a>
+</body>
+</html>
