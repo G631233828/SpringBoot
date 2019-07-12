@@ -12,47 +12,42 @@
 
 	<dependencies>
 		<!-- Springboot 启动器 -->
-		<dependency>
+	 <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		<!-- springboot 启动时分析应用程序环境和打印诊断的方法 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-properties-migrator</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+		</dependency> 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<!-- 开发者模式 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!-- springdata jpa依赖 -->
-		<dependency>
+		<!-- springboot 启动时分析应用程序环境和打印诊断的方法 -->
+	<!-- 	<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<artifactId>spring-boot-properties-migrator</artifactId>
+			<scope>runtime</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
+		</dependency> -->
 		<!-- druid数据库连接池 -->
-		<dependency>
+	 	<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 			<version>1.1.17</version>
-		</dependency>
-
+		</dependency> 
+ 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
@@ -60,7 +55,7 @@
 		<dependency>
 			<groupId>net.sf.ehcache</groupId>
 			<artifactId>ehcache</artifactId>
-		</dependency>
+		</dependency> 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -69,17 +64,17 @@
 	</dependencies>
 
 	<!-- 构建节点 -->
-	<build>
+<!-- 	<build>
 		<plugins>
-			<!-- 这是spring boot devtool plugin -->
+			这是spring boot devtool plugin
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<!--fork : 如果没有该项配置，肯呢个devtools不会起作用，即应用不会restart -->
+					fork : 如果没有该项配置，肯呢个devtools不会起作用，即应用不会restart
 					<fork>true</fork>
 				</configuration>
 			</plugin>
 		</plugins>
-	</build>
+	</build> -->
 </project>

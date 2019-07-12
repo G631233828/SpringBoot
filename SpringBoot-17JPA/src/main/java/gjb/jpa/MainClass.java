@@ -1,15 +1,13 @@
-package gjb.ehcache;
+package gjb.jpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableCaching
 public class MainClass {
 
-	
-	//°¸ÀýµØÖ·https://www.cnblogs.com/lic309/p/4072848.html
 	public static void main(String[] args) {
 		SpringApplication.run(MainClass.class, args);
 	}

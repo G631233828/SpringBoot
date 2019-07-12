@@ -7,38 +7,53 @@
 	<packaging>pom</packaging>
 
 	<properties>
-	<spring-data.version>Fowler-SR2</spring-data.version>
-	<spring-boot.version>2.1.4.RELEASE</spring-boot.version>
-	<java.version>1.8</java.version>
+		<spring-data.version>Fowler-SR2</spring-data.version>
+		<spring-boot.version>2.0.2.RELEASE</spring-boot.version>
+		<java.version>1.8</java.version>
 	</properties>
 
 
-<!-- 如果在dependencies中配置了springboot的dependencies的依赖后就不需要配置parent来继承给子模块
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.4.RELEASE</version>
-	</parent> -->
+	<!-- 如果在dependencies中配置了springboot的dependencies的依赖后就不需要配置parent来继承给子模块 <parent> 
+		<groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-parent</artifactId> 
+		<version>2.1.4.RELEASE</version> </parent> -->
 
 	<dependencyManagement>
 		<dependencies>
-		<!-- 覆盖Spring Boot提供的Spring Data版本系列  -->
-		<dependency> 
-			<groupId>org.springframework.data</groupId> 
-			<artifactId>spring-data-releasetrain</artifactId> 
-			<version>${spring-data.version}</version> 
-			<type>pom</type> 
-			<scope>import</scope> 
-		</dependency> 
-		<dependency> 
-			<!--  从Spring Boot导入依赖关系管理  -->
-			<groupId>org.springframework.boot</groupId> 
-			<artifactId>spring-boot-dependencies</artifactId> 
-			<version>2.1.4.RELEASE</version> 
-			<type>pom</type> 
-			<scope>import</scope> 
-		</dependency> 
+			<!-- 覆盖Spring Boot提供的Spring Data版本系列 -->
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-releasetrain</artifactId>
+				<version>${spring-data.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<!-- 从Spring Boot导入依赖关系管理 -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>2.1.4.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-redis</artifactId>
+				<version>2.1.5.RELEASE</version>
+			</dependency>
 
+			<!-- 高版本redis的lettuce需要commons-pool2 -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-pool2</artifactId>
+				<version>2.6.0</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-jpa</artifactId>
+				<version>2.1.4.RELEASE</version>
+			</dependency>
 
 
 		</dependencies>
@@ -85,6 +100,8 @@
 		<module>SpringBoot-13JunitTest</module>
 		<module>SpringBoot-14Loader</module>
 		<module>SpringBoot-15Ehcache</module>
+		<module>SpringBoot-16Redis</module>
+		<module>SpringBoot-17JPA</module>
 	</modules>
 
 
