@@ -102,6 +102,7 @@
 		<module>SpringBoot-15Ehcache</module>
 		<module>SpringBoot-16Redis</module>
 		<module>SpringBoot-17JPA</module>
+		<module>SpringBoot-19Scheduled</module>
 	</modules>
 
 

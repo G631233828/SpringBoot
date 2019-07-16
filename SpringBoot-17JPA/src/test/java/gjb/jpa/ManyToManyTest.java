@@ -50,7 +50,7 @@ public class ManyToManyTest {
 		m.getRole().add(r);
 		m2.getRole().add(r);
 		this.r.save(r);
-
+  
 	}
 
 	@Test

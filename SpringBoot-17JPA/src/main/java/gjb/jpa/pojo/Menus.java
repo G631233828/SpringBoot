@@ -41,6 +41,8 @@ public class Menus {
 	private Integer fatherId;
 	
 	//CascadeType.PERSIST 级联添加
-	@ManyToMany(mappedBy="menu",cascade=CascadeType.PERSIST,fetch = FetchType.LAZY)
+	//fetch = FetchType.LAZY 延迟加载
+	//fetch = FetchType.EAGER立即加载
+	@ManyToMany(mappedBy="menu",cascade=CascadeType.PERSIST,fetch = FetchType.EAGER)
 	private Set<Roles> role = new HashSet<>();
 }
